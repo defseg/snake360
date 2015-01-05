@@ -25,7 +25,7 @@
   var context = canvasEl.getContext("2d");
   var width = canvasEl.scrollWidth;
   var height = canvasEl.scrollHeight;
-  var game = new SnakeGame.Game(width, height);
+  var game = new SnakeGame.Game(width, height, false);
   var gameView = new SnakeGame.GameView(game, context);
   gameView.start();
   </script>
