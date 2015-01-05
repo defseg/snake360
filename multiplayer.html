@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>Snake360</title>
+  <title>Snake360: Multiplayer</title>
   <style>
     body {
       text-align: center;
@@ -26,11 +26,11 @@
   var context = canvasEl.getContext("2d");
   var width = canvasEl.scrollWidth;
   var height = canvasEl.scrollHeight;
-  var game = new SnakeGame.Game(width, height, false);
+  var game = new SnakeGame.Game(width, height, true);
   var gameView = new SnakeGame.GameView(game, context);
   gameView.start();
   </script>
   <br><br><br><br>
-  <a href="multiplayer.html">Multiplayer</a>
+  <a href="index.html">Single-player</a>
 </body>
 </html>
