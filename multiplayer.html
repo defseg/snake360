@@ -2,19 +2,55 @@
 <head>
   <title>Snake360: Multiplayer</title>
   <style>
-    body {
-      text-align: center;
-      background-color: #999999;
-      font-family: sans-serif;
-    }
+  * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  body {
+    text-align: center;
+    background-color: #999999;
+    font-family: sans-serif;
+    margin-top: 10px;
+  }
+
+  li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 auto 10px auto;
+  }
+  canvas {
+    margin: auto;
+  }
   </style>
+  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+
 </head>
 
 <body>
+
+  <header>
+    <ul id="hud">
+      <li id="hud-plays">
+      </li>
+      <li id="hud-score">
+        Points since last death: <span id="score"></span>.
+      </li>
+      <li id="hud-hiscore">
+        High score: <span id="hiscore">sfdfsda</span>.
+      </li>
+      <li>
+        <a href="index.html">Single-player.</a>
+      </li>
+    </ul>
+  </header>
+
   <canvas id="game-canvas" width="400" height="400">
   </canvas>
 
   <script src="lib/util.js"></script>
+  <script src="lib/hud.js"></script>
   <script src="lib/food.js"></script>
   <script src="lib/game.js"></script>
   <script src="lib/gameView.js"></script>
@@ -31,6 +67,5 @@
   gameView.start();
   </script>
   <br><br><br><br>
-  <a href="index.html">Single-player</a>
 </body>
 </html>
